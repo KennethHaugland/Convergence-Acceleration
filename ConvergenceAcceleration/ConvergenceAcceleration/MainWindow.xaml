@@ -1,0 +1,61 @@
+﻿<Window x:Class="ConvergenceAcceleration.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConvergenceAcceleration"
+        xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+    <StackPanel>
+        <TextBlock TextBlock.FontSize="30" >Leibnitz formula for pi</TextBlock>
+        <controls:FormulaControl x:Name="LeibnitzFomula" Margin="10"  />
+        <TextBlock>Number of terms:</TextBlock>
+        <TextBox x:Name="txtPiTerms">10</TextBox>
+        <Button Click="btnCalculatePi">Calculate Pi</Button>
+        <WrapPanel>
+            <TextBlock>Standard series:</TextBlock>
+            <TextBox  x:Name="txtPiStandardResult"></TextBox>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock>Accelerated series Atkin:</TextBlock>
+            <TextBox x:Name="txtPiAitkin"/>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock>Accelerated series Epsilon:</TextBlock>
+            <TextBox x:Name="txtPiEpsilon"></TextBox>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock>Accelerated series Levin:</TextBlock>
+            <TextBox x:Name="txtPiLevin"></TextBox>
+        </WrapPanel>
+        <Separator Margin="20" BorderThickness="20" BorderBrush="Black"></Separator>
+        <TextBlock TextBlock.FontSize="30" >Basel problem</TextBlock>
+        <controls:FormulaControl x:Name="BaselFormula" Margin="10"  />
+        <TextBlock>Number of terms in Basel series:</TextBlock>
+        <TextBox x:Name="txtBaselTerms">10</TextBox>
+        <Button Click="btnCalculateBasel">Calculate Basel sum</Button>
+        <WrapPanel>
+            <TextBlock>Standard series:</TextBlock>
+            <TextBox  x:Name="txtBaselSum"></TextBox>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock>Accelerated series Richardson:</TextBlock>
+            <TextBox x:Name="txtAcceleratedBaselSereis"/>
+        </WrapPanel>
+        <Separator Margin="20" BorderThickness="20" BorderBrush="Black"></Separator>
+        <TextBlock TextBlock.FontSize="30" >Series for Log(2)</TextBlock>
+        <controls:FormulaControl x:Name="Log2Formula" Margin="10"  />
+        <TextBlock>Numer of terms:</TextBlock>
+        <TextBox x:Name="txtLog2Terms">10</TextBox>
+        <Button Click="btnCalculateLog2">Calculate Log(2)</Button>
+        <WrapPanel>
+            <TextBlock>Standard series:</TextBlock>
+            <TextBox  x:Name="txtStandardLog2Summation"></TextBox>
+        </WrapPanel>
+        <WrapPanel>
+            <TextBlock>Accelerated series Atkin:</TextBlock>
+            <TextBox x:Name="txtEulerLog2Summation"/>
+        </WrapPanel>
+    </StackPanel>
+</Window>
